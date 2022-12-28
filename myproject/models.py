@@ -1,26 +1,23 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
+from sqlalchemy import  Column,  Integer, String
+
 
 from database import Base
 
 
-class User(Base):
-    __tablename__ = "users"
+class driver(Base):
+    __tablename__ = "driver"
 
-    id = Column(Integer, primary_key=True, index=True)
-    email = Column(String, unique=True, index=True)
-    hashed_password = Column(String)
-    is_active = Column(Boolean, default=True)
-
-    items = relationship("Item", back_populates="owner")
+    driver_id = Column(Integer, primary_key=True, index=True)
+    driver_name = Column(String, unique=True, index=True)
+    race_number = Column(Integer, unique=True, index=True)
+    country = Column(String, index=True)
 
 
-class Item(Base):
-    __tablename__ = "items"
 
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(String, index=True)
-    owner_id = Column(Integer, ForeignKey("users.id"))
+class team(Base):
+    __tablename__ = "team"
 
-    owner = relationship("User", back_populates="items")
+    team_id = Column(Integer, primary_key=True, index=True)
+    team_name = Column(String,unique=True, index=True)
+
+

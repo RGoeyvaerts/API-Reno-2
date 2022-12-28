@@ -1,35 +1,34 @@
 from pydantic import BaseModel
 
 
-class ItemBase(BaseModel):
-    title: str
+class driverBase(BaseModel):
+    driver_name: str
     description: str | None = None
 
 
-class ItemCreate(ItemBase):
+class driverCreate(driverBase):
     pass
 
 
-class Item(ItemBase):
-    id: int
-    owner_id: int
+class driver(driverBase):
+    driver_id: int
+    race_number: int
+    country: str
 
     class Config:
         orm_mode = True
 
 
-class UserBase(BaseModel):
-    email: str
+class teamBase(BaseModel):
+    team_name: str
 
 
-class UserCreate(UserBase):
-    password: str
+class teamCreate(teamBase):
+    pass
 
 
-class User(UserBase):
-    id: int
-    is_active: bool
-    items: list[Item] = []
+class team(teamBase):
+    team_id: int
 
     class Config:
         orm_mode = True
