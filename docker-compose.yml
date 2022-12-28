@@ -1,11 +1,11 @@
 version: "3.9"
 services:
  system-service:
-  image: miverboven/python-db-test
+  image: reno2003/api-reno-2
   ports:
     - "8000:8000"
   volumes:
-    - sqlite_useritems_volume:/code/sqlitedb
+    - sqlite_f1_volume:/code/sqlitedb
 
 volumes:
-  sqlite_useritems_volume:
+  sqlite_f1_volume:
