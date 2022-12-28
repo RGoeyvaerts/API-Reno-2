@@ -53,9 +53,13 @@ def get_db():
 
 @app.get("/drivers/", response_model=list[schemas.driver])
 def read_drivers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    users = crud_operations.get_all_drivers(db, skip=skip, limit=limit)
-    return users
+    drivers = crud_operations.get_all_drivers(db, skip=skip, limit=limit)
+    return drivers
 
+@app.get("/teams/", response_model=list[schemas.team])
+def get_all_teams(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    teams = crud_operations.get_all_drivers(db, skip=skip, limit=limit)
+    return teams
 
 # @app.get("/users/{user_id}", response_model=schemas.User)
 # def read_user(user_id: int, db: Session = Depends(get_db)):

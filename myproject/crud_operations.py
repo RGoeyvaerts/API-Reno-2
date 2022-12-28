@@ -15,6 +15,9 @@ def get_team(db: Session, team: str):
 def get_all_drivers(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.driver).offset(skip).limit(limit).all()
 
+def get_all_teams(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.team).offset(skip).limit(limit).all()
+
 
 # def create_user(db: Session, user: schemas.UserCreate):
 #     hashed_password = auth.get_password_hash(user.password)
