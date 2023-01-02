@@ -20,4 +20,10 @@ class team(Base):
     team_id = Column(Integer, primary_key=True, index=True)
     team_name = Column(String,unique=True, index=True)
 
+class circuit(Base):
+    __tablename__= "circuit"
+    circuit_id = Column(Integer, primary_key=True, index=True)
+    circuit_name = Column(String, unique=True, index=True)
+
+
 

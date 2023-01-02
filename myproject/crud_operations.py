@@ -4,8 +4,13 @@ import models
 import schemas
 
 
-def get_driver(db: Session, driver_name:str):
-    return db.query(models.driver).filter(models.driver.driver_name == driver_name).first()
+def get_driver(db: Session, driver_id: int):
+    return db.query(models.driver).filter(models.driver.driver_id == driver_id).first()
+
+
+
+def get_circuit(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.circuit).offset(skip).limit(limit).all()
 
 
 def get_team(db: Session, team: str):

@@ -32,3 +32,15 @@ class team(teamBase):
 
     class Config:
         orm_mode = True
+
+class circuitBase(BaseModel):
+    circuit_name: str
+
+class circuitCreate(circuitBase):
+    pass
+
+class circuit(circuitBase):
+    circuit_id: int
+
+    class Config:
+        orm_mode = True
