@@ -24,13 +24,18 @@ def get_all_teams(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.team).offset(skip).limit(limit).all()
 
 
-# def create_user(db: Session, user: schemas.UserCreate):
-#     hashed_password = auth.get_password_hash(user.password)
-#     db_user = models.User(email=user.email, hashed_password=hashed_password)
-#     db.add(db_user)
-#     db.commit()
-#     db.refresh(db_user)
-#     return db_user
+def create_driver(db: Session, driver: schemas.driverCreate):
+    db_driver = models.driver(driver_name=driver.driver_name,race_number=driver.race_number, country= driver.country)
+    db.add(db_driver)
+    db.commit()
+    db.refresh(db_driver)
+    return db_driver
+
+
+def get_driver_by_name(db: Session, driver_name:str):
+    return db.query(models.driver).filter(models.driver.driver_name == driver_name).first()
+
+
 #
 #
 # def get_items(db: Session, skip: int = 0, limit: int = 100):

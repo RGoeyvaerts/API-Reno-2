@@ -3,17 +3,17 @@ from pydantic import BaseModel
 
 class driverBase(BaseModel):
     driver_name: str
-    description: str | None = None
 
 
 class driverCreate(driverBase):
-    pass
+    race_number: int
+    country: str
+
 
 
 class driver(driverBase):
     driver_id: int
-    race_number: int
-    country: str
+
 
     class Config:
         orm_mode = True

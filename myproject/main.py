@@ -68,6 +68,12 @@ def read_circuit(skip: int = 0, limit: int = 100, db: Session = Depends(get_db))
     return circuit
 
 
+@app.post("/driver/", response_model=schemas.driver)
+def create_driver(driver: schemas.driverCreate, db: Session = Depends(get_db)):
+    return crud_operations.create_driver(db=db, driver=driver)
+
+
+
 #
 # @app.post("/users/{user_id}/items/", response_model=schemas.Item)
 # def create_item_for_user(
