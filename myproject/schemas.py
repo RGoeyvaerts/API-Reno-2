@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class driverBase(BaseModel):
@@ -13,7 +14,6 @@ class driverCreate(driverBase):
 
 class driver(driverBase):
     driver_id: int
-
 
     class Config:
         orm_mode = True
@@ -33,6 +33,7 @@ class team(teamBase):
     class Config:
         orm_mode = True
 
+
 class circuitBase(BaseModel):
     circuit_name: str
 
@@ -44,3 +45,4 @@ class circuit(circuitBase):
 
     class Config:
         orm_mode = True
+

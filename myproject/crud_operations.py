@@ -35,7 +35,19 @@ def create_driver(db: Session, driver: schemas.driverCreate):
 def get_driver_by_name(db: Session, driver_name:str):
     return db.query(models.driver).filter(models.driver.driver_name == driver_name).first()
 
+def create_team(db: Session, team: schemas.teamCreate):
+    db_team = models.team(team_name=team.team_name)
+    db.add(db_team)
+    db.commit()
+    db.refresh(db_team)
+    return db_team
 
+def create_circuit(db: Session, circuit: schemas.circuitCreate):
+    db_circuit = models.circuit(circuit_name=circuit.circuit_name)
+    db.add(db_circuit)
+    db.commit()
+    db.refresh(db_circuit)
+    return db_circuit
 #
 #
 # def get_items(db: Session, skip: int = 0, limit: int = 100):

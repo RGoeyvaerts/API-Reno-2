@@ -62,7 +62,7 @@ def get_all_teams(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
     teams = crud_operations.get_all_teams(db, skip=skip, limit=limit)
     return teams
 
-@app.get("/circuit/", response_model=list[schemas.circuit])
+@app.get("/circuits/", response_model=list[schemas.circuit])
 def read_circuit(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     circuit = crud_operations.get_circuit(db, skip=skip, limit=limit)
     return circuit
@@ -72,17 +72,34 @@ def read_circuit(skip: int = 0, limit: int = 100, db: Session = Depends(get_db))
 def create_driver(driver: schemas.driverCreate, db: Session = Depends(get_db)):
     return crud_operations.create_driver(db=db, driver=driver)
 
+@app.post("/team/", response_model=schemas.team)
+def create_team(team: schemas.teamCreate, db: Session = Depends(get_db)):
+    return crud_operations.create_team(db=db, team=team)
 
+@app.post("/circuit/", response_model=schemas.circuit)
+def create_team(circuit: schemas.circuitCreate, db: Session = Depends(get_db)):
+    return crud_operations.create_circuit(db=db, circuit=circuit)
 
-#
-# @app.post("/users/{user_id}/items/", response_model=schemas.Item)
-# def create_item_for_user(
-#     user_id: int, item: schemas.ItemCreate, db: Session = Depends(get_db)
-# ):
-#     return crud.create_user_item(db=db, item=item, user_id=user_id)
-#
-#
-# @app.get("/items/", response_model=list[schemas.Item])
-# def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-#     items = crud.get_items(db, skip=skip, limit=limit)
-#     return items
+@app.delete("/circuits/{circuit_id}")
+def delete_circuit(circuit_id: int):
+    with Session(engine) as session:
+        circuit = session.get(models.circuit, circuit_id)
+        if not circuit:
+            raise HTTPException(status_code=404, detail="circuit not found")
+        session.delete(circuit)
+        session.commit()
+        return {"ok": True}
+
+@app.put("/drivers/{driver_id}")
+def update_todo(driver_id: int, race_number: str):
+    session = Session(bind=engine, expire_on_commit=False)
+    racenumber = session.query(models.driver).get(driver_id)
+    if racenumber:
+        racenumber.race_number = race_number
+        session.commit()
+    session.close()
+    if not racenumber:
+        raise HTTPException(status_code=404, detail=f"driver with id {driver_id} not found")
+
+    return racenumber
+
