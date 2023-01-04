@@ -91,7 +91,7 @@ def delete_circuit(circuit_id: int):
         return {"ok": True}
 
 @app.put("/drivers/{driver_id}")
-def update_todo(driver_id: int, race_number: str):
+def update_racenumber(driver_id: int, race_number: str):
     session = Session(bind=engine, expire_on_commit=False)
     racenumber = session.query(models.driver).get(driver_id)
     if racenumber:
