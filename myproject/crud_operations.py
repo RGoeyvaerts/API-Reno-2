@@ -25,7 +25,8 @@ def get_all_teams(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_driver(db: Session, driver: schemas.driverCreate):
-    db_driver = models.driver(driver_name=driver.driver_name,race_number=driver.race_number, country= driver.country)
+    country = auth.get_password_hash(driver.country)
+    db_driver = models.driver(driver_name=driver.driver_name,race_number=driver.race_number, country=country)
     db.add(db_driver)
     db.commit()
     db.refresh(db_driver)

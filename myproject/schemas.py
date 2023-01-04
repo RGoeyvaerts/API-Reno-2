@@ -14,6 +14,8 @@ class driverCreate(driverBase):
 
 class driver(driverBase):
     driver_id: int
+    race_number: int
+    country: str
 
     class Config:
         orm_mode = True
