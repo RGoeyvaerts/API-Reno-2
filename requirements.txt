@@ -3,5 +3,5 @@ pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
 sqlalchemy==1.4.42
 passlib==1.7.4
-argon2==0.30.2
-bcrypt==5.1.0
+argon2==0.1.8
+
