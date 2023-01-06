@@ -35,6 +35,24 @@ ik heb voor de user tabel een get en een post request om data te kunnen displaye
 
 ![image](https://user-images.githubusercontent.com/91118302/211034725-9e7c8544-03c6-4d05-a82e-6c332c759695.png)
 
+![image](https://user-images.githubusercontent.com/91118302/211035050-32e14c18-9a35-4fc6-8dd7-ffe9bf278cef.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035184-df47f1a7-8a69-4376-84ef-a092a255a7ae.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035393-1c688ad2-e49c-48cf-97e5-9e318b1a82df.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035492-58fdcf5e-1054-46fd-8544-65ff68a31e10.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035621-f9845331-829f-44fb-acca-1e110b68df3e.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035809-58c0cec6-6066-4b96-b1b6-b8c4875b4822.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211035883-c26399f1-1e21-4df3-87e0-34d83dd7c710.png)
+
+
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/91118302/211000775-67090fa1-8c64-4b37-b2db-2902d4851de3.png)
