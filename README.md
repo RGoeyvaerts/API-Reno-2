@@ -3,7 +3,7 @@ ik heb gekozen voor F1 omdat ik dit volg sinds 2020 en heel snel fan ben geworde
 
 https://system-service-rgoeyvaerts.cloud.okteto.net
 
-ik maak de screenshots van postman voor ik de oauth toevoeg omdat het mij niet lukt om de auth te gebruiken met postman.
+
 
 ik heb voor de driver tabel een get , post, put en delete request gemaakt om data te kunnen displayen, toevoegen, aanpassen en verwijderen.
 ik heb voor de team tabel een get, post en delete request gemaakt om data te kunnen displayen,toevoegen en verwijderen.
