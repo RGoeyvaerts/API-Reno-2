@@ -38,6 +38,12 @@ def create_driver(db: Session, driver: schemas.driverCreate):
 def get_driver_by_name(db: Session, driver_name:str):
     return db.query(models.driver).filter(models.driver.driver_name == driver_name).first()
 
+def get_team_by_name(db: Session, team_name:str):
+    return db.query(models.team).filter(models.team.team_name == team_name).first()
+
+def get_circuit_by_name(db: Session, circuit_name:str):
+    return db.query(models.circuit).filter(models.circuit.circuit_name == circuit_name).first()
+
 def create_team(db: Session, team: schemas.teamCreate):
     db_team = models.team(team_name=team.team_name)
     db.add(db_team)
