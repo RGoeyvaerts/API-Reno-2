@@ -72,12 +72,12 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
 
 
 @app.get("/drivers/", response_model=list[schemas.driver])
-def read_drivers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def read_drivers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     drivers = crud_operations.get_all_drivers(db, skip=skip, limit=limit)
     return drivers
 
 @app.post("/driver/", response_model=schemas.driver)
-def create_driver(driver: schemas.driverCreate, db: Session = Depends(get_db)):
+def create_driver(driver: schemas.driverCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     db_driver = crud_operations.get_driver_by_name(db, driver_name=driver.driver_name)
     if db_driver:
         raise HTTPException(status_code=400, detail="Driver already registered")
@@ -85,7 +85,7 @@ def create_driver(driver: schemas.driverCreate, db: Session = Depends(get_db)):
 
 
 @app.put("/drivers/{driver_id}")
-def update_racenumber(driver_id: int, race_number: str):
+def update_racenumber(driver_id: int, race_number: str, token: str = Depends(oauth2_scheme)):
     session = Session(bind=engine, expire_on_commit=False)
     racenumber = session.query(models.driver).get(driver_id)
     if racenumber:
@@ -98,7 +98,7 @@ def update_racenumber(driver_id: int, race_number: str):
     return racenumber
 
 @app.delete("/driver/{driver_id}")
-def delete_driver(driver_id: int):
+def delete_driver(driver_id: int , token: str = Depends(oauth2_scheme)):
     with Session(engine) as session:
         driver = session.get(models.driver, driver_id)
         if not driver:
@@ -115,12 +115,12 @@ def delete_driver(driver_id: int):
 
 
 @app.get("/teams/", response_model=list[schemas.team])
-def get_all_teams(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def get_all_teams(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     teams = crud_operations.get_all_teams(db, skip=skip, limit=limit)
     return teams
 
 @app.post("/team/", response_model=schemas.team)
-def create_team(team: schemas.teamCreate, db: Session = Depends(get_db)):
+def create_team(team: schemas.teamCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     db_team = crud_operations.get_team_by_name(db, team_name=team.team_name)
     if db_team:
         raise HTTPException(status_code=400, detail="Team already registered")
@@ -129,7 +129,7 @@ def create_team(team: schemas.teamCreate, db: Session = Depends(get_db)):
 
 
 @app.delete("/team/{team_id}")
-def delete_team(team_id: int):
+def delete_team(team_id: int, token: str = Depends(oauth2_scheme)):
     with Session(engine) as session:
         team = session.get(models.team, team_id)
         if not team:
@@ -146,20 +146,20 @@ def delete_team(team_id: int):
 
 
 @app.get("/circuits/", response_model=list[schemas.circuit])
-def read_circuit(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def read_circuit(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     circuit = crud_operations.get_circuit(db, skip=skip, limit=limit)
     return circuit
 
 
 @app.post("/circuit/", response_model=schemas.circuit)
-def create_circuit(circuit: schemas.circuitCreate, db: Session = Depends(get_db)):
+def create_circuit(circuit: schemas.circuitCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     db_circuit = crud_operations.get_circuit_by_name(db, circuit_name=circuit.circuit_name)
     if db_circuit:
         raise HTTPException(status_code=400, detail="Circuit already registered")
     return crud_operations.create_circuit(db=db, circuit=circuit)
 
 @app.delete("/circuits/{circuit_id}")
-def delete_circuit(circuit_id: int):
+def delete_circuit(circuit_id: int, token: str = Depends(oauth2_scheme)):
     with Session(engine) as session:
         circuit = session.get(models.circuit, circuit_id)
         if not circuit:
@@ -172,7 +172,7 @@ def delete_circuit(circuit_id: int):
 
 
 @app.get("/users/", response_model=list[schemas.User])
-def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     users = crud_operations.get_users(db, skip=skip, limit=limit)
     return users
 
