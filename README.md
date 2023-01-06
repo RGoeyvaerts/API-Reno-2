@@ -3,7 +3,7 @@ ik heb gekozen voor F1 omdat ik dit volg sinds 2020 en heel snel fan ben geworde
 
 https://system-service-rgoeyvaerts.cloud.okteto.net
 
-ik maak de scrrenshots van postman voor ik de oauth toevoeg omdat het mij niet lukt om de auth te gebruiken met postman.
+ik maak de screenshots van postman voor ik de oauth toevoeg omdat het mij niet lukt om de auth te gebruiken met postman.
 
 ![image](https://user-images.githubusercontent.com/91118302/210983294-b251e267-79bc-49c3-9581-efe07dcbb9a5.png)
 
