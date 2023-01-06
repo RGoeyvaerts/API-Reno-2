@@ -172,7 +172,7 @@ def delete_circuit(circuit_id: int):
 
 
 @app.get("/users/", response_model=list[schemas.User])
-def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud_operations.get_users(db, skip=skip, limit=limit)
     return users
 
