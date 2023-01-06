@@ -29,6 +29,7 @@ ik heb voor de user tabel een get en een post request om data te kunnen displaye
 
 
 
+![image](https://user-images.githubusercontent.com/91118302/211034044-94bdc4f7-a5ec-446d-acbf-3139f82fb8d9.png)
 
 
 
