@@ -6,6 +6,7 @@ https://system-service-rgoeyvaerts.cloud.okteto.net
 
 
 ik heb voor de driver tabel een get , post, put en delete request gemaakt om data te kunnen displayen, toevoegen, aanpassen en verwijderen.
+
 ik heb voor de team tabel een get, post en delete request gemaakt om data te kunnen displayen,toevoegen en verwijderen.
 
 ik heb voor de circuit tabel een get, post en delete request gemaakt om data te kunnen displayen,toevoegen en verwijderen.
