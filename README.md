@@ -49,6 +49,24 @@ ik heb voor de user tabel een get en een post request om data te kunnen displaye
 
 ![image](https://user-images.githubusercontent.com/91118302/211035883-c26399f1-1e21-4df3-87e0-34d83dd7c710.png)
 
+![image](https://user-images.githubusercontent.com/91118302/211036645-01c4199b-6a41-4606-98b7-96775a9d5362.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211037117-d0b8803b-e4af-42e2-956c-ff9aa4e646e2.png)
+
+
+![image](https://user-images.githubusercontent.com/91118302/211037215-44fc42b3-c45a-432b-89c3-c3ec49fdb8f7.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211037336-1191bda8-d471-4a13-b724-9c5a781aa6c8.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211037621-c005def2-52d6-4fb4-beba-264ff173efa6.png)
+
+
+
+
+
+
+
+
 
 
 
