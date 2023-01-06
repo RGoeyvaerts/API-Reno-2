@@ -60,6 +60,28 @@ ik maak de screenshots van postman voor ik de oauth toevoeg omdat het mij niet l
 
 ![image](https://user-images.githubusercontent.com/91118302/211000817-342f68f9-bef5-4d94-b42b-9141e065df60.png)
 
+![image](https://user-images.githubusercontent.com/91118302/211000927-eff45183-a14d-4211-8737-87cb3f6a4e5e.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211000971-fb037a72-5fc8-41dd-9ba0-1243366caaaf.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001003-0fa2a269-7894-4382-b268-ff5466a4b403.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001059-b950a5f1-311c-4755-a99a-ea86277f458b.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001085-8f18af3a-703e-4f31-9fc8-796c0053338c.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001115-f2d46b06-3cdf-4deb-8297-dc7a7984e4b0.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001167-b402d78d-4ef6-4414-bbb9-77180ef2fee7.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001196-829ed32f-55ca-4064-889c-5c3f1eb2b7aa.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001226-c14d9b82-43f0-436d-aab4-d8fc2c5b1155.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001263-b5f2e4b1-196f-429b-9b2b-988e0963bacc.png)
+
+![image](https://user-images.githubusercontent.com/91118302/211001316-95d09c8f-d13e-493e-91ec-5c041e120592.png)
+
 
 
 
