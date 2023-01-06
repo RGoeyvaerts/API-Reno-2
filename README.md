@@ -16,7 +16,19 @@ ik maak de screenshots van postman voor ik de oauth toevoeg omdat het mij niet l
 
 ![image](https://user-images.githubusercontent.com/91118302/210986429-a372bf87-c723-4e93-94a0-346961f3a95c.png)
 
-![image](https://user-images.githubusercontent.com/91118302/210987026-62e80ff5-bacb-4b6f-af42-f76226d3c0ec.png)
+![image](https://user-images.githubusercontent.com/91118302/210991195-6f8ee5cd-dbf3-4cb2-86eb-cd5efe551b9c.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210991664-ee123806-d3e6-4ec1-8b4e-c7d637a0566b.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210992064-72f799f7-fb2d-4226-97f8-33754d2dee36.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210992340-d3aa4de4-6620-4876-ad8f-cb1454feebf1.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210992838-71634e9d-86c5-4b45-bc48-a8f4a878a916.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210994122-27fe61b7-e1d3-4453-9f00-bc97555218c8.png)
+
+![image](https://user-images.githubusercontent.com/91118302/210994335-0b931470-a263-4a45-96c0-3c332847aeb0.png)
 
 
 
