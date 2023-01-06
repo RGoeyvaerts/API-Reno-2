@@ -136,7 +136,7 @@ def delete_team(team_id: int):
             raise HTTPException(status_code=404, detail="team not found")
         session.delete(team)
         session.commit()
-        return {"ok": True}
+        return {"team deleted": True}
 
 
 
@@ -166,7 +166,7 @@ def delete_circuit(circuit_id: int):
             raise HTTPException(status_code=404, detail="circuit not found")
         session.delete(circuit)
         session.commit()
-        return {"ok": True}
+        return {"circuit deleted": True}
 
 
 
