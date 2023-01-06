@@ -105,7 +105,7 @@ def delete_driver(driver_id: int):
             raise HTTPException(status_code=404, detail="driver not found")
         session.delete(driver)
         session.commit()
-        return {"ok": True}
+        return {"driver deleted": True}
 
 
 
