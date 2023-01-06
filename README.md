@@ -8,6 +8,7 @@ ik maak de screenshots van postman voor ik de oauth toevoeg omdat het mij niet l
 ik heb voor de driver tabel een get , post, put en delete request gemaakt om data te kunnen displayen, toevoegen, aanpassen en verwijderen.
 ik heb voor de team tabel een get, post en delete request gemaakt om data te kunnen displayen,toevoegen en verwijderen.
 ik heb voor de circuit tabel een get, post en delete request gemaakt om data te kunnen displayen,toevoegen en verwijderen.
+
 ik heb voor de user tabel een get en een post request om data te kunnen displayen en toevoegen.
 
 ![image](https://user-images.githubusercontent.com/91118302/210999864-43a8f9a0-6b12-4b55-85dc-669caa61a656.png)
